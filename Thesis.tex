@@ -73,17 +73,37 @@
 %     Begin Document                                                   %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
-
+% Do not count pages until after the FirstPage
+\pagenumbering{gobble}
 % Set plain page style (no headers, footer with centered page number)
 \pagestyle{plain}
 
-% Set roman numbering (i,ii,...) before the start of chapters
-\pagenumbering{roman}
 
 % ----------------------------------------------------------------------
 %  Cover page
 % ----------------------------------------------------------------------
 \input{Thesis_FrontCover} % file "Thesis_FrontCover.tex"
+\cleardoublepage
+
+\newpage
+\mbox{}
+\newpage
+\cleardoublepage
+% ----------------------------------------------------------------------
+%  First page
+% ----------------------------------------------------------------------
+\input{Thesis_FirstPage} % file "Thesis_FirstPage.tex"
+\cleardoublepage
+
+% ----------------------------------------------------------------------
+%  Abstract (both in English and Portuguese)
+% ----------------------------------------------------------------------
+% Set roman numbering (i,ii,...) before the start of chapters
+\pagenumbering{roman}
+\input{Thesis_Resumo}   % file "Thesis_Resumo.tex"
+\cleardoublepage
+
+\input{Thesis_Abstract} % file "Thesis_Abstract.tex"
 \cleardoublepage
 
 % ----------------------------------------------------------------------
@@ -96,15 +116,6 @@
 %  Acknowledgments (optional)
 % ----------------------------------------------------------------------
 \input{Thesis_Acknowledgements} % file "Thesis_Acknowledgements.tex"
-\cleardoublepage
-
-% ----------------------------------------------------------------------
-%  Abstract (both in English and Portuguese)
-% ----------------------------------------------------------------------
-\input{Thesis_Resumo}   % file "Thesis_Resumo.tex"
-\cleardoublepage
-
-\input{Thesis_Abstract} % file "Thesis_Abstract.tex"
 \cleardoublepage
 
 % ----------------------------------------------------------------------
@@ -169,37 +180,37 @@
 \input{/home/guimas/Documents/Chapters/intro/Chapters/Introduction.tex}
 \cleardoublepage
 
-%\chapter{Edge and divertor physics}
-%\label{chapter:edgeanddivertorphysics}
-%\input{/home/guimas/Documents/Chapters/edgeanddiv/Chapters/edgeanddivertor.tex}
-%\cleardoublepage
+\chapter{Edge and divertor physics}
+\label{chapter:edgeanddivertorphysics}
+\input{/home/guimas/Documents/Chapters/edgeanddiv/Chapters/edgeanddivertor.tex}
+\cleardoublepage
 
-%\chapter{Reflectometry measurement technique and signal analysis}
-%\label{chapter:reflectometry}
-%\input{/home/guimas/Documents/Chapters/reflectometry/Chapters/reflectometry.tex}
-%\input{/home/guimas/Documents/Chapters/reflectometry/Chapters/analysis.tex}
-%\input{/home/guimas/Documents/Chapters/reflectometry/Chapters/diagnostics.tex}
-%\cleardoublepage
+\chapter{Reflectometry measurement technique and signal analysis}
+\label{chapter:reflectometry}
+\input{/home/guimas/Documents/Chapters/reflectometry/Chapters/reflectometry.tex}
+\input{/home/guimas/Documents/Chapters/reflectometry/Chapters/analysis.tex}
+\input{/home/guimas/Documents/Chapters/reflectometry/Chapters/diagnostics.tex}
+\cleardoublepage
 
-%\chapter{Evolution of density profiles in L-mode}
-%\label{chapter:lmode}
-%\input{/home/guimas/Documents/Chapters/lmode/Chapters/L-mode.tex}
-%\cleardoublepage
+\chapter{Evolution of density profiles in L-mode}
+\label{chapter:lmode}
+\input{/home/guimas/Documents/Chapters/lmode/Chapters/L-mode.tex}
+\cleardoublepage
 
-%\chapter{Evolution of density profiles in H-mode}
-%\label{chapter:hmode}
-%\input{/home/guimas/Documents/Chapters/hmode/Chapters/H-mode.tex}
-%\cleardoublepage
+\chapter{Evolution of density profiles in H-mode}
+\label{chapter:hmode}
+\input{/home/guimas/Documents/Chapters/hmode/Chapters/H-mode.tex}
+\cleardoublepage
 
-%\chapter{Effect of the magnetic configuration on the HFS density profiles}
-%\label{chapter:magconf}
-%\input{/home/guimas/Documents/Chapters/magconf/Chapters/Magconf.tex}
-%\cleardoublepage
+\chapter{Effect of the magnetic configuration on the HFS density profiles}
+\label{chapter:magconf}
+\input{/home/guimas/Documents/Chapters/magconf/Chapters/Magconf.tex}
+\cleardoublepage
 
-%\chapter{Summary and future prospects}
-%\label{chapter:summaryandconclusions}
-%\input{/home/guimas/Documents/Chapters/Summary/Chapters/summary.tex}
-%\cleardoublepage
+\chapter{Summary and future prospects}
+\label{chapter:summaryandconclusions}
+\input{/home/guimas/Documents/Chapters/Summary/Chapters/summary.tex}
+\cleardoublepage
 
 
 % ----------------------------------------------------------------------
